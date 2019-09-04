@@ -1,0 +1,39 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Subejct</th>
+      <th>Work</th>
+      <th>Users</th>
+      <th>Deadline</th>
+    </tr>
+  </thead>
+        {% for Sub in Subjects %}
+        
+
+
+  <tbody>
+
+
+            {%for text in Sub.subworks.all %}
+                <tr>
+
+                    {% ifchanged %}
+                    <td rowspan="{{ Sub.subworks.all.count }}">{{Sub.Subject_name}}</td>
+                    {% endifchanged %}
+                    <td>{{text.text}}</td>
+                    <td>{%for users in text.userpp.all %}
+                            {{users}}
+                            <br>
+                        {% endfor %}
+                    </td>
+                    <td>{{text.deadline}}</td>
+                </tr>
+
+
+
+
+            {% endfor %}
+        {% endfor%}
+</tbody>
+</table>
+

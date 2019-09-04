@@ -1,0 +1,30 @@
+{% extends 'BBproj/base.html' %}
+
+{% block sidebar %}
+<ul class="sidebar-menu">
+                        <li class="treeview">
+                            <a href="/assigned_work/">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>Assigned work</span>
+                                <!--<i class="fa fa-angle-left pull-right"></i>-->
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i>You</a></li>
+                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i>Your Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="/loggout/">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>Log out</span>
+                                <!--<i class="fa fa-angle-left pull-right"></i>-->
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i>You</a></li>
+                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i>Your Team</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+
+{% endblock %}

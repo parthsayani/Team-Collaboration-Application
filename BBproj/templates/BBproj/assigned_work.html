@@ -1,0 +1,26 @@
+{% extends 'BBproj/loggedin.html' %}
+{% block content %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Subejct</th>
+      <th>Work</th>
+      <!-- <th>Users</th> -->
+      <th>Deadline</th>
+    </tr>
+  </thead>
+ <tbody>
+ 
+	{% for w in Work %}
+	<tr>
+		<td>{{w.Subject}}</td>
+		<td>{{w|safe}}</td>
+		<td>{{w.deadline}}</td><br>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
+
+</body>
+</html>

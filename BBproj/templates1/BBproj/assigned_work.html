@@ -1,0 +1,20 @@
+{% extends 'BBproj/loggedin.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+{% for w in Work %}
+Subject:{{w.Subject}}
+Work:{{w}}
+Deadline:{{w.deadline}}
+<br>
+{% endfor %}
+
+{% endblock %}
+
+</body>
+</html>

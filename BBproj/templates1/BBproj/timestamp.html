@@ -1,0 +1,41 @@
+{% extends 'BBproj/admin.html' %}
+{% block content %}
+
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <!--<th>#</th>-->
+      <th>Date</th>
+      <th>NAME</th>
+      <th>In</th>
+      <th>OuT</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+  {% for timestamp in Timestampss %}
+<!--{{ timestamp.dcount }}-->
+      <!--<td><td>{{ timestamps1.Date }}</td></td>-->
+
+      <!--<br>-->
+
+      {% for timestamps1 in Timestamps1 %}
+        {% if timestamps1.Date == timestamp.Date %}
+          <tr>
+
+            {% ifchanged %}
+            <td rowspan="{{timestamp.dcount}}">{{ timestamps1.Date}}</td>
+            {% endifchanged %}
+
+      <td>{{timestamps1.userp}} {{timestamp.dcount}}</td>
+      <td>{{timestamps1.Logintime}}</td>
+      <td>{{timestamps1.Logouttime}}</td>
+    </tr>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}
